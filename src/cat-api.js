@@ -12,9 +12,10 @@ const END_POINTS = {
 };
 
 // axios.get('/user?ID=12345');
+// axios('/user/12345');
 
 export const fetchBreeds = () => {
-    return axios.get(`${END_POINTS.breeds}`);
+    return axios(`${END_POINTS.breeds}`);
 
     // return fetch(`${BASE_URL}${END_POINT_BREEDS}`).then(response => {
     //     if (!response.ok) {
@@ -25,7 +26,7 @@ export const fetchBreeds = () => {
 };
 
 export const fetchCatByBreed = breedId => {
-    return axios.get(`${END_POINTS.info}?breed_ids=${breedId}`);
+    return axios(`${END_POINTS.info}?breed_ids=${breedId}`);
 
     // return fetch(
     //     `${BASE_URL}${END_POINT_INFO}?api_key=live_boJNQn3Slg7cwkz688gYFph6RgjT7n6xAh7DSIoYsl0forLrPApDURKhlODZW3dF&breed_ids=${breedId}`
